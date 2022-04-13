@@ -32,7 +32,7 @@ int main()
 	std::string cashierName, customersName;
 	int quantityOne, quantityTwo, quantityThree, quantityFour, quantityFive;
 	int priceOne, priceTwo, priceThree, priceFour, priceFive;
-    int discount;
+        int discount;
 	int width = 24;
 
 	storeHeader();
