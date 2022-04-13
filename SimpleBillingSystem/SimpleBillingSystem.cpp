@@ -8,7 +8,6 @@
 
 #include <iostream>
 #include <cstdlib>
-#include <fstream>
 #include <iomanip>
 #include <string> 
 
@@ -32,7 +31,7 @@ int main()
 	std::string cashierName, customersName;
 	int quantityOne, quantityTwo, quantityThree, quantityFour, quantityFive;
 	int priceOne, priceTwo, priceThree, priceFour, priceFive;
-        int discount;
+	int discount, customersCash;
 	int width = 24;
 	int widthR = 36;
 	int widthr = 13;
@@ -119,9 +118,7 @@ int main()
 
 	//cashier and customer's cash transaction
 	std::cout << "Customer's Cash: ";
-	int customersCash{};
 	std::cin >> customersCash;
-	std::cout << '\n';
 	int amountChange = customersCash - totalAmount;
 	std::cout << "Change: " << amountChange << std::endl;
 	std::cout << "Please wait for the receipt...." << std::endl;
@@ -132,7 +129,6 @@ int main()
 	//pause program
 	system("pause");
 
-	std::ofstream fout("invoice.txt");
 	//start of the receipt
 	storeHeader(); 
 
