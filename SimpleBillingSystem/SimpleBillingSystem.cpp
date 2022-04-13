@@ -8,19 +8,9 @@
 
 #include <iostream>
 #include <cstdlib>
+#include <fstream>
 #include <iomanip>
 #include <string> 
-
-//declaring variables
-std::string itemOne, itemTwo, itemThree, itemFour, itemFive;
-std::string cashierName, customersName;
-int quantityOne, quantityTwo, quantityThree, quantityFour, quantityFive;
-int priceOne, priceTwo, priceThree, priceFour, priceFive;
-int sumsOfPrice_One, sumsOfPrice_Two, sumsOfPrice_Three, sumsOfPrice_Four, sumsOfPrice_Five;
-int sumOfQuantity, sumOfItemsPrice;
-int amountChange, customersCash, discount;
-int totalAmount;
-int width = 24;
 
 //void functions
 void itemsList();
@@ -37,6 +27,14 @@ void storeFooter();
 
 int main()
 {
+	//declaring variables
+	std::string itemOne, itemTwo, itemThree, itemFour, itemFive;
+	std::string cashierName, customersName;
+	int quantityOne, quantityTwo, quantityThree, quantityFour, quantityFive;
+	int priceOne, priceTwo, priceThree, priceFour, priceFive;
+    int discount;
+	int width = 24;
+
 	storeHeader();
 
 	itemsList();
@@ -105,7 +103,6 @@ int main()
 	//Cashier's Input
 	std::cout << "Cashier's Name: ";
 	std::cin >> cashierName;
-	std::cout << '\n';
 	std::cout << "Customer's Name: ";
 	std::cin >> customersName;
     std:std::cout << std::endl;
@@ -133,6 +130,7 @@ int main()
 	//pause program
 	system("pause");
 
+	std::ofstream fout("invoice.txt");
 	//start of the receipt
 	storeHeader(); 
 
@@ -213,7 +211,7 @@ void storeFooter()
 	std::cout << std::endl;
 	std::cout << "-------------------------------------------------------" << '\n';
 	std::cout << "                 Thank you for Shopping!               " << '\n';
-	std::cout << "           This serves as your sales invoice           " << '\n';
+	std::cout << "           This serves as your sales invoice.          " << '\n';
 	std::cout << "                                                       " << '\n';
 	std::cout << "         This invoice/receipt shall be valid for       " << '\n';
 	std::cout << "           five (5) years from the date of the         " << '\n';
@@ -222,6 +220,4 @@ void storeFooter()
 	std::cout << std::endl;
 	std::cout << "*******************************************************" << '\n';
 }
-
-
 
