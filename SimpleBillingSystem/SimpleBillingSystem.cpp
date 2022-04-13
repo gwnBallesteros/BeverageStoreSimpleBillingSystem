@@ -105,7 +105,7 @@ int main()
 	std::cin >> cashierName;
 	std::cout << "Customer's Name: ";
 	std::cin >> customersName;
-    std:std::cout << std::endl;
+        std::cout << std::endl;
 
 	std::cout << "Total Price: " << sumOfItemsPrice << '\n';
 
