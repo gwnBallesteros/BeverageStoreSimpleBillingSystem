@@ -34,6 +34,8 @@ int main()
 	int priceOne, priceTwo, priceThree, priceFour, priceFive;
     int discount;
 	int width = 24;
+	int widthR = 36;
+	int widthr = 13;
 
 	storeHeader();
 
@@ -105,7 +107,7 @@ int main()
 	std::cin >> cashierName;
 	std::cout << "Customer's Name: ";
 	std::cin >> customersName;
-        std::cout << std::endl;
+    std::cout << std::endl;
 
 	std::cout << "Total Price: " << sumOfItemsPrice << '\n';
 
@@ -143,10 +145,11 @@ int main()
 	std::cout << std::setw(width) << itemFive << std::setw(width) << quantityFive << std::setw(width) << priceFive << '\n';
 	std::cout << "-------------------------------------------------------" << '\n';
 	std::cout << std::setw(width) << "Total" << std::setw(width) << sumOfQuantity << "P" << sumOfItemsPrice << '\n';
-	std::cout << "                          " << "DISCOUNT: " << "            " << "P" << discount << '\n';
-	std::cout << "                          " << "TOTAL DUE: " << "           " << "P" << totalAmount << '\n';
-	std::cout << "                          " << "CASH: " << "                " << "P" << customersCash << '\n';
-	std::cout << "                          " << "CHANGE: " << "              " << "P" << amountChange << '\n';
+	std::cout << std::right;
+	std::cout << std::setw(widthR) << "DISCOUNT: " << std::setw(widthr) << "P" << discount << '\n';
+	std::cout << std::setw(widthR) << "TOTAL DUE: " << std::setw(widthr) << "P" << totalAmount << '\n';
+	std::cout << std::setw(widthR) << "CASH: " << std::setw(widthr) << "P" << customersCash << '\n';
+	std::cout << std::setw(widthR) << "CHANGE: " << std::setw(widthr) << "P" << amountChange << '\n';
 	std::cout << std::endl;
 	std::cout << std::endl;
 	std::cout << "Cashier's Name: " << cashierName << '\n';
@@ -154,8 +157,6 @@ int main()
 
 	storeFooter();
 	//end of the receipt
-
-	system("pause");
 
 	return 0;
 }
