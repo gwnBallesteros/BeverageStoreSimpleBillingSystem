@@ -12,9 +12,9 @@
 #include <string> 
 
 //void functions
-void itemsList();
-
 void storeHeader();
+
+void itemsList();
 
 void inputItemStatement();
 
